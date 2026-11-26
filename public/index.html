@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1f6f50">
+  <title>App Name</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>App Name</h1></header>
+  <main>
+    <section id="time">
+      <h2>Screen time today</h2>
+      <p><b id="total">0</b> of <input id="goal" type="number" min="1" aria-label="Daily goal in minutes"> min</p>
+      <progress id="bar" max="120" value="0"></progress>
+      <form id="timeForm"><input type="number" min="1" max="1440" placeholder="Minutes" required><button>Add</button></form>
+      <button id="resetTime" class="alt">Reset today</button>
+    </section>
+    <section id="rules" hidden>
+      <h2>Family rules</h2>
+      <form id="ruleForm"><input maxlength="80" placeholder="New rule we agree on" required><button>Add</button></form>
+      <ul id="ruleList"></ul>
+    </section>
+    <section id="talk" hidden>
+      <h2>Talk together</h2>
+      <p id="prompt">Tap for a question.</p>
+      <button id="nextPrompt">New question</button>
+    </section>
+    <section id="habits" hidden>
+      <h2>Habits today</h2>
+      <form id="habitForm"><input maxlength="60" placeholder="New habit" required><button>Add</button></form>
+      <ul id="habitList"></ul>
+    </section>
+  </main>
+  <nav>
+    <button data-tab="time" aria-current="page">Time</button>
+    <button data-tab="rules">Rules</button>
+    <button data-tab="talk">Talk</button>
+    <button data-tab="habits">Habits</button>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
