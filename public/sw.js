@@ -1,5 +1,5 @@
 // Network first, cache as offline fallback. Bump CACHE when you change files.
-const CACHE = 'olive-v2';
+const CACHE = 'olive-v3';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png'];
 self.addEventListener('install', e => {
   self.skipWaiting();
